@@ -2,8 +2,22 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from dataclasses import dataclass
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:4321",
+    "https://cartas-hecho-a-mano-prototype.vercel.app"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 @dataclass
 class Card:
