@@ -4,6 +4,8 @@ from dataclasses import dataclass
 
 app = FastAPI()
 
+handler = app
+
 @dataclass
 class Card:
   card_id: int
