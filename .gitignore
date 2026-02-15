@@ -1,0 +1,80 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# ==========================
+# Entornos virtuales
+# ==========================
+.env
+.venv
+venv/
+env/
+fastapi_env/
+
+# Conda
+conda-meta/
+*.conda
+*.tar.bz2
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+
+# ==========================
+# Archivos de configuración sensibles
+# ==========================
+.env.*
+!.env.example
+
+# ==========================
+# Base de datos
+# ==========================
+*.db
+*.sqlite3
+
+# ==========================
+# Archivos de sistema
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# IDEs y editores
+# ==========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================
+# Testing & coverage
+# ==========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================
+# Build
+# ==========================
+build/
+dist/
+*.egg-info/
+
+# ==========================
+# Docker
+# ==========================
+docker-compose.override.yml
+
+# ==========================
+# Archivos temporales
+# ==========================
+*.bak
+*.tmp
