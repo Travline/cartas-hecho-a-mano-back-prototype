@@ -3,8 +3,12 @@ from fastapi.responses import FileResponse
 from dataclasses import dataclass
 from typing import List
 from fastapi.middleware.cors import CORSMiddleware
+from routes.auth import router as auth_router
 
 app = FastAPI()
+
+
+app.include_router(auth_router, prefix="/auth")
 
 origins = [
     "http://localhost:4321",
@@ -37,6 +41,12 @@ cards: List[Card] = [
 @app.get("/cards")
 async def get_cards():
     return cards
+
+@app.get("/cards/img")
+async def get_images():
+    res: list[dict] =[]
+    for card in cards:
+        res.append({"img_id":card.card_id})
 
 @app.get("/cards/img/{card_id}")
 async def get_card_img(card_id: int):

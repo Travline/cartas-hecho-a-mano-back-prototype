@@ -1,2 +1,12 @@
 fastapi
 uvicorn[standard]
+SQLAlchemy
+sqlmodel
+python-jose[cryptography]
+argon2-cffi
+python-dotenv
+pydantic
+pydantic[email]
+uuid6
+psycopg2
+asyncpg
