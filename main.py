@@ -47,6 +47,7 @@ async def get_images():
     res: list[dict] =[]
     for card in cards:
         res.append({"img_id":card.card_id})
+    return res
 
 @app.get("/cards/img/{card_id}")
 async def get_card_img(card_id: int):
